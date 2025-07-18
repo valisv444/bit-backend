@@ -1,0 +1,33 @@
+
+<div class="suggestions-container">
+  <h1 class="suggestions-title">🎮 Consola de Sugerencias</h1>
+
+  <form [formGroup]="form" (ngSubmit)="enviar()" class="suggestions-form" novalidate>
+    <div class="suggestions-group">
+      <label for="tipo">Tipo de sugerencia:</label>
+      <select formControlName="tipo" id="tipo" class="suggestions-input">
+        <option value="">-- Selecciona --</option>
+        <option *ngFor="let tipo of tipos" [value]="tipo.value">{{ tipo.label }}</option>
+      </select>
+    </div>
+
+    <div class="suggestions-group">
+      <label for="titulo">Título / Nombre:</label>
+      <input id="titulo" type="text" formControlName="titulo" class="suggestions-input" />
+    </div>
+
+    <div class="suggestions-group">
+      <label for="descripcion">¿Por qué lo sugieres?</label>
+      <textarea id="descripcion" formControlName="descripcion" rows="3" class="suggestions-input"></textarea>
+    </div>
+
+    <div class="suggestions-group">
+      <label for="usuario">Tu nombre o apodo (opcional):</label>
+      <input id="usuario" type="text" formControlName="usuario" class="suggestions-input" placeholder="Anónimo" />
+    </div>
+
+    <button type="submit" class="suggestions-button" [disabled]="loading || form.invalid">
+      {{ loading ? '⏳ Enviando...' : '🚀 Enviar sugerencia' }}
+    </button>
+  </form>
+</div>

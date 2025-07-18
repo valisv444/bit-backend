@@ -1,0 +1,33 @@
+<h1>🌟 Mis Favoritos</h1>
+
+<ul>
+  <li *ngFor="let fav of favorites()" class="favorite-item">
+    <h3>{{ fav.title }} ({{ fav.type }})</h3>
+    <p><strong>Nota personal:</strong> {{ fav.personalNote || 'Sin nota' }}</p>
+    <p><strong>Calificación:</strong> {{ fav.rating || 'Sin calificación' }}</p>
+
+    <button (click)="editFavorite(fav)">✏️ Editar</button>
+    <button (click)="deleteFavorite(fav._id)">🗑️ Eliminar</button>
+
+    <div *ngIf="selectedItem === fav" class="edit-form">
+      <label>
+        Nota personal:
+        <input [(ngModel)]="note" placeholder="Escribe una nota..." />
+      </label>
+
+      <label>
+        Calificación:
+        <input type="number" [(ngModel)]="rating" min="1" max="5" />
+      </label>
+
+      <button (click)="saveFavorite(fav)">💾 Guardar</button>
+      <button (click)="cancelEdit()">❌ Cancelar</button>
+    </div>
+
+    <hr />
+  </li>
+</ul>
+
+<div *ngIf="favorites().length === 0">
+  <p>No hay favoritos aún. ¡Agrega libros, autores o temas desde las secciones!</p>
+</div>

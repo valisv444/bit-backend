@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const {
-  createSubscriber,
-  getSubscribers
-} = require('../controller/subscribercontroller');
+const subscriberController = require('../controller/subscribercontroller');
 
-router.post('/subscribers', createSubscriber);
-
-router.get('/subscribers', getSubscribers);
+router.post('/', subscriberController.createSubscriber);
+router.get('/', subscriberController.getSubscribers);
+router.delete('/:id', subscriberController.deleteSubscriber);  
+router.put('/:id', subscriberController.updateSubscriber);     
 
 module.exports = router;
+
+

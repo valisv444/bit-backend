@@ -1,0 +1,49 @@
+<h1 class="book-title">Libros de la Edad Media</h1>
+
+<ul class="book-list">
+  <li *ngFor="let book of books()" class="book-card">
+    <img [src]="book.imagen" alt="{{ book.titulo }}" class="book-image" />
+
+    <h3 class="book-name">{{ book.titulo }}</h3>
+    <p ><strong>Autor:</strong> {{ book.autor }}</p>
+    <p><strong>Género:</strong> {{ book.genero }}</p>
+    <p><strong>Año:</strong> {{ book['año'] }}</p>
+    <p><strong>Descripción:</strong> {{ book.descripcion }}</p>
+    <p><strong>Ubicación física:</strong> {{ book.ubicacionFisica }}</p>
+
+    <div *ngIf="book.pdf">
+      <a [href]="book.pdf" target="_blank" class="pdf-link">📄 Leer PDF</a>
+    </div>
+
+    <div *ngIf="book.enlaceCompra && book.enlaceCompra.length > 0">
+      <p><strong>Enlaces de compra:</strong></p>
+      <ul>
+        <li *ngFor="let link of book.enlaceCompra">
+          <a [href]="link" target="_blank" class="buy-link">{{ link }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <button (click)="openFavoriteForm(book)" title="Agregar a favoritos" class="fav-button">⭐</button>
+
+    <div *ngIf="selectedItem === book" class="favorite-form">
+      <h3>Agregar "{{ selectedItem?.titulo }}" a favoritos</h3>
+
+      <label>
+        Nota personal:
+        <input [(ngModel)]="note" placeholder="Escribe una nota..." />
+      </label>
+
+      <label>
+        Calificación:
+        <input type="number" [(ngModel)]="rating" min="1" max="5" />
+      </label>
+
+      <button (click)="addFavorite()">💾 Guardar</button>
+      <button (click)="cancelFavorite()">❌ Cancelar</button>
+    </div>
+
+    <hr />
+  </li>
+</ul>
+

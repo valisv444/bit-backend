@@ -1,0 +1,47 @@
+<h1 *ngIf="!enviadoConExito">📬 Suscríbete a nuestra Biblioteca Medieval</h1>
+
+<form *ngIf="!enviadoConExito" [formGroup]="form" (ngSubmit)="enviar()" class="formulario" novalidate>
+  <label for="nombre">Nombre: *</label>
+  <input id="nombre" type="text" formControlName="nombre" />
+  <div class="error" *ngIf="form.get('nombre')?.touched && form.get('nombre')?.invalid">
+    El nombre es obligatorio.
+  </div>
+
+  <label for="correo">Correo electrónico: *</label>
+  <input id="correo" type="email" formControlName="correo" />
+  <div class="error" *ngIf="form.get('correo')?.touched && form.get('correo')?.invalid">
+    <span *ngIf="form.get('correo')?.errors?.['required']">El correo es obligatorio.</span>
+    <span *ngIf="form.get('correo')?.errors?.['email']">El formato del correo no es válido.</span>
+  </div>
+
+  <label for="password">Contraseña: *</label>
+  <input id="password" type="password" formControlName="password" />
+  <div class="error" *ngIf="form.get('password')?.touched && form.get('password')?.invalid">
+    <span *ngIf="form.get('password')?.errors?.['required']">La contraseña es obligatoria.</span>
+    <span *ngIf="form.get('password')?.errors?.['minlength']">
+      Mínimo 6 caracteres.
+    </span>
+  </div>
+
+  <label for="intereses">¿Sobre qué temas te gustaría recibir información?</label>
+  <textarea
+    id="intereses"
+    formControlName="intereses"
+    rows="3"
+    placeholder="Ej: Libros, Autores, Géneros...">
+  </textarea>
+
+  <label>
+    <input type="checkbox" (change)="seleccionarTodo()" />
+    Me interesa TODO
+  </label>
+
+  <button type="submit" [disabled]="loading || form.invalid">
+    {{ loading ? '⏳ Enviando...' : '🚀 Enviar suscripción' }}
+  </button>
+</form>
+
+<div *ngIf="enviadoConExito" class="mensaje-exito">
+  <h2>🎉 ¡Gracias por suscribirte a nuestra Biblioteca Medieval!</h2>
+  <p>Pronto recibirás novedades en tu correo electrónico. Serás redirigido a la página principal.</p>
+</div>

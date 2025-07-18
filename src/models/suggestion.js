@@ -1,18 +1,28 @@
 const mongoose = require('mongoose');
 
-const suggestionSchema = new mongoose.Schema({
+const SuggestionSchema = new mongoose.Schema({
   tipo: {
     type: String,
-    enum: ['libro', 'autor', 'genero', 'info'],
+    enum: ['libro', 'autor', 'genero', 'tema', 'recurso', 'otro'], 
     required: true
   },
-  titulo: { type: String, required: true },
-  descripcion: { type: String, required: true },
-  usuario: { type: String, required: true },
-  fecha: { type: Date, default: Date.now },
-  seccion: { type: String, default: 'sugerencias' }
-}, {
-  timestamps: true
+  titulo: {
+    type: String,
+    required: true
+  },
+  descripcion: {
+    type: String,
+    required: true
+  },
+  usuario: {
+    type: String,
+    default: 'Anónimo'
+  },
+  fecha: {
+    type: Date,
+    default: Date.now
+  }
 });
 
-module.exports = mongoose.model('Suggestion', suggestionSchema);
+module.exports = mongoose.model('Suggestion', SuggestionSchema);
+

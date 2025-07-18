@@ -12,8 +12,11 @@ const createInfo = async (req, res) => {
 
 const getInfo = async (req, res) => {
   try {
-    const infoEntries = await Info.find();
-    res.json(infoEntries);
+    const info = await Info.find(); 
+    if (!info || info.length === 0) {
+      return res.status(404).json({ message: 'No se encontró información disponible' });
+    }
+    res.json(info); 
   } catch (err) {
     res.status(500).json({ message: 'Error al obtener la información' });
   }
@@ -38,6 +41,7 @@ const updateInfo = async (req, res) => {
     res.status(400).json({ message: 'Error al actualizar la información' });
   }
 };
+
 
 const deleteInfo = async (req, res) => {
   try {

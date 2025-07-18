@@ -8,14 +8,11 @@ const {
   deleteSuggestion
 } = require('../controller/suggestioncontroller');
 
-router.post('/suggestions', createSuggestion);
 
-router.get('/suggestions', getSuggestions);
-
-router.get('/suggestions/:id', getSuggestionById);
-
-router.put('/suggestions/:id', updateSuggestion);
-
-router.delete('/suggestions/:id', deleteSuggestion);
+router.post('/', createSuggestion);
+router.get('/', getSuggestions);
+router.get('/:id', getSuggestionById);
+router.put('/:id', updateSuggestion);
+router.delete('/:id', deleteSuggestion);
 
 module.exports = router;

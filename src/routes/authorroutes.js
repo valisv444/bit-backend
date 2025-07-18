@@ -8,10 +8,10 @@ const {
   deleteAuthor
 } = require('../controller/authorcontroller');
 
-router.post('/authors', createAuthor);         
-router.get('/authors', getAuthors);            
-router.get('/authors/:id', getAuthorById);     
-router.put('/authors/:id', updateAuthor);      
-router.delete('/authors/:id', deleteAuthor);   
+router.post('/', createAuthor);         
+router.get('/', getAuthors);            
+router.get('/:id', getAuthorById);     
+router.put('/:id', updateAuthor);      
+router.delete('/:id', deleteAuthor);   
 
 module.exports = router;

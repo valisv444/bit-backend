@@ -1,0 +1,37 @@
+<h1 style="color: rgb(190, 163, 9);" class="section-title">Autores medievales</h1>
+
+<div class="authors-container">
+  <div *ngFor="let author of authors()" class="author-card">
+    <h2 style="color: rgb(237, 231, 45);">{{ author.nombre }}</h2>
+    <img [src]="author.imagen" [alt]="author.nombre" />
+    <p style="color: beige;"><strong>Nacimiento:</strong> {{ author.nacimiento }}</p>
+    <p style="color: beige;"><strong>Fallecimiento:</strong> {{ author.fallecimiento }}</p>
+    <p style="color: bisque;"><strong>Obra más famosa:</strong> {{ author.obraFamosa }}</p>
+    <p style="color: bisque;">{{ author.biografia }}</p>
+    <a [href]="author.enlaceBiografia" target="_blank">
+      📖 Leer más sobre {{ author.nombre }}
+    </a>
+
+    <button (click)="openFavoriteForm(author)" class="fav-button" title="Agregar a favoritos">⭐</button>
+
+    <div *ngIf="selectedItem === author" class="favorite-form">
+      <h3>Agregar "{{ selectedItem?.nombre }}" a favoritos</h3>
+
+      <label>
+        Nota personal:
+        <input [(ngModel)]="note" placeholder="Escribe una nota..." />
+      </label>
+
+      <label>
+        Calificación:
+        <input type="number" [(ngModel)]="rating" min="1" max="5" />
+      </label>
+
+      <button (click)="addFavorite()">💾 Guardar</button>
+      <button (click)="cancelFavorite()">❌ Cancelar</button>
+    </div>
+  </div>
+</div>
+
+
+

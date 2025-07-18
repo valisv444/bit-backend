@@ -1,0 +1,47 @@
+<h1 style="color: rgb(207, 162, 15);">Géneros literarios medievales</h1>
+
+<div *ngIf="info().length === 0">
+  <p>No hay información disponible.</p>
+</div>
+
+<div class="genre-container">
+  <div *ngFor="let item of info()" class="genre-card">
+    <h2>{{ item.titulo }}</h2>
+    <img [src]="item.imagen" alt="Imagen de {{ item.titulo }}" />
+    <p style="color: beige;"><strong>Descripción:</strong> {{ item.descripcion }}</p>
+    <p style="color: beige;"><strong>Contexto:</strong> {{ item.contexto }}</p>
+    <p style="color: beige;"><strong>Año de origen:</strong> {{ item.anioOrigen }}</p>
+
+    <p><strong>Obras destacadas:</strong></p>
+    <ul>
+      <li *ngFor="let obra of item.obras">{{ obra }}</li>
+    </ul>
+
+    <p><strong>Exponentes importantes:</strong></p>
+    <ul>
+      <li *ngFor="let autor of item.exponentes">{{ autor }}</li>
+    </ul>
+
+    <button (click)="openFavoriteForm(item)" title="Agregar a favoritos">⭐</button>
+
+    <div *ngIf="selectedItem === item" class="favorite-form">
+      <h3>Agregar "{{ item.titulo }}" a favoritos</h3>
+
+      <label>
+        Nota personal:
+        <input [(ngModel)]="note" placeholder="Escribe una nota..." />
+      </label>
+
+      <label>
+        Calificación:
+        <input type="number" [(ngModel)]="rating" min="1" max="5" />
+      </label>
+
+      <button (click)="addFavorite()">💾 Guardar</button>
+      <button (click)="cancelFavorite()">❌ Cancelar</button>
+    </div>
+
+    <hr />
+  </div>
+</div>
+

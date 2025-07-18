@@ -1,0 +1,1260 @@
+/* You can add global styles to this file, and also import other style files */
+h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #637cf8;
+  margin: 30px 0;
+  font-family: 'Georgia', serif;
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+li {
+  background-color: #fdf8f2;
+  border-left: 6px solid #c59d5f;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+img {
+  align-self: center;
+  border-radius: 8px;
+  max-width: 120px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #2c2c2c;
+  margin: 10px 0 0;
+}
+
+p {
+  margin: 4px 0;
+  color: #444;
+  font-family: 'Times New Roman', serif;
+}
+
+strong {
+  color: #5e2b1c;
+}
+
+a {
+  color: #8b4513;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: #c45b1b;
+}
+
+hr {
+  margin-top: 20px;
+  border: none;
+  border-top: 2px dashed #ddd;
+}
+
+body {
+    background-color: #f6ea6c;
+}
+
+
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+button {
+  padding: 10px;
+  background-color: #920089;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: #fdf6ef;
+  box-shadow: 0 0 10px rgba(92, 32, 32, 0.3);
+  border: 2px solid #7b2e2e;
+  font-family: 'Georgia', serif;
+  color: #4a1f1f;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #7b2e2e;
+  font-size: 1.05rem;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid #a97c50;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #fff8f1;
+  color: #4a1f1f;
+  font-family: 'Georgia', serif;
+}
+
+.checkbox {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #4a1f1f;
+}
+
+button {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  background-color: #7b2e2e;
+  color: #fff8e1;
+  border: 2px solid #d5a253;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #5c1e1e;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  border: none;
+}
+
+.error {
+  color: #a32020;
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+  font-style: italic;
+}
+
+.mensaje-exito {
+  text-align: center;
+  margin-top: 60px;
+  padding: 30px;
+  background-color: #fef8ec;
+  border: 2px solid #7b2e2e;
+  border-radius: 12px;
+  font-family: 'Georgia', serif;
+  color: #3e2717;
+}
+
+.mensaje-exito h2 {
+  color: #7b2e2e;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.favorite-form {
+  margin-top: 20px;
+  padding: 1rem;
+  background-color: #fff6e0;
+  border: 2px dashed #d5a253;
+  border-radius: 12px;
+  max-width: 400px;
+  font-family: 'Georgia', serif;
+  color: #4a1f1f;
+}
+
+.favorite-form input {
+  width: 100%;
+  padding: 6px;
+  margin: 6px 0 12px;
+  border-radius: 4px;
+  border: 1px solid #a97c50;
+  background-color: #fffaf4;
+  color: #4a1f1f;
+  font-family: 'Georgia', serif;
+}
+
+
+
+/* Consola de sugerencias */
+.suggestions-container {
+  background-color: #3e0d0d; 
+  color: #f5e9d5; 
+  border: 3px solid #d4af37; 
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 40px auto;
+  font-family: 'Garamond', 'Times New Roman', serif;
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+.suggestions-title {
+  text-align: center;
+  color: #d4af37; /* dorado */
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #000;
+}
+
+.suggestions-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestions-group {
+  margin-bottom: 20px;
+}
+
+.suggestions-input {
+  background-color: #5a1c1c;
+  color: #fcefdc;
+  border: 2px solid #d4af37;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: inset 0 0 5px #000;
+  font-family: 'Garamond', 'Times New Roman', serif;
+}
+
+.suggestions-input:focus {
+  outline: none;
+  border-color: #ffd700;
+  box-shadow: 0 0 7px #ffd700;
+}
+
+.suggestions-button {
+  background: linear-gradient(to right, #d4af37, #a67c00);
+  color: #2c0a0a;
+  font-weight: bold;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: 'Garamond', serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.suggestions-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #d4af37;
+}
+
+small {
+  color: #ffd1d1;
+  font-size: 12px;
+}
+
+
+.cartelito {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #c6ffe0;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  text-align: center;
+  box-shadow: 0 0 10px #2e7d32;
+}
+
+/* NAVBAR MEDIEVAL */
+nav.top-header {
+  background-image: url('assets/Catedral\ de\ Troyes\,\ Francia.jpg');
+  background-repeat: repeat-x; 
+  background-size: auto 100%;  
+  background-position: center center;
+  min-height: 240px; 
+  border-bottom: 4px solid #d4af37;
+  padding: 3rem 2rem; 
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  font-family: 'MedievalSharp', serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+
+
+
+
+nav.top-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+nav.top-header .logo img {
+  height: 60px;
+  filter: drop-shadow(2px 2px 2px #000);
+}
+
+nav.top-header .logo span {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #f7d774; 
+  text-shadow: 
+    2px 2px 4px #000, 
+    0 0 10px #d4af37, 
+    0 0 20px #d4af37; 
+  font-family: 'MedievalSharp', serif;
+}
+
+
+nav.top-header .icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1rem; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+nav.top-header .icons a {
+  text-decoration: none;
+  color: #3e2f19;
+  font-size: 0.9rem; 
+  background: linear-gradient(145deg, #fff5d0, #e6c77c);
+  padding: 0.3rem 0.7rem; 
+  border: 1.5px solid #d4af37;
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+  margin: 0.2rem;
+  min-width: auto;
+  text-align: center;
+}
+
+
+nav.top-header .icons a {
+  text-decoration: none;
+  color: #3e2f19;
+  font-size: 0.9rem; 
+  background: linear-gradient(145deg, #fff5d0, #e6c77c);
+  padding: 0.3rem 0.7rem; 
+  border-radius: 8px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+  margin: 0.2rem;
+  min-width: auto;
+  text-align: center;
+}
+
+
+nav.top-header .icons a:hover {
+  background: linear-gradient(145deg, #d4af37, #f7d774);
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px #d4af37;
+}
+
+/*IMAGEN BANNER*/
+
+.home-title {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #ffd700; /* dorado */
+  font-family: 'Garamond', serif;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Contenedor vinotinto con borde dorado */
+.home-banner-container {
+  background-color: #800015; 
+  border: 5px solid gold;
+  border-radius: 20px;
+  padding: 0.5rem;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+
+/* Imagen gigante del banner */
+.home-banner-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* Envoltura general */
+.home-banner-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Título */
+.home-title {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #ffd700;
+  font-family: 'Garamond', serif;
+  text-shadow: 2px 2px 4px #000;
+  z-index: 2;
+}
+
+/* Contenedor de imagen */
+.home-banner {
+  background-color: #800020;
+  border: 5px solid gold;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  overflow: hidden;
+}
+
+/* Imagen grande y horizontal */
+.home-banner img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+  border-radius: 15px;
+}
+
+/* Envoltura general */
+.home-banner-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+/* Título */
+.home-title {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  color: #ffd700;
+  font-family: 'Garamond', serif;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* Contenedor de imagenes con fondo vinotinto y bordes dorados */
+.home-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #800020;
+  border: 5px solid gold;
+  border-radius: 20px;
+  padding: 10px;
+  gap: 10px;
+  flex-wrap: wrap; 
+}
+
+
+.home-banner img {
+  width: 49%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+
+
+
+
+
+
+
+/*FOOTER*/
+footer.medieval-footer {
+  background-color: #4b000a; 
+  color: #f9d65c; 
+  border-top: 4px solid #d4af37; 
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-family: 'MedievalSharp', serif;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.5);
+  margin-top: 80px;
+}
+
+footer.medieval-footer h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #ffd700; 
+  text-shadow: 1px 1px 4px black;
+}
+
+footer.medieval-footer p,
+footer.medieval-footer a {
+  font-size: 0.95rem;
+  color: #f5e6ac;
+  text-decoration: none;
+  margin: 0.3rem;
+}
+
+footer.medieval-footer a:hover {
+  color: white;
+  text-shadow: 0 0 6px #d4af37;
+  transition: 0.3s ease;
+}
+
+footer.medieval-footer .footer-icons {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+footer.medieval-footer .footer-icons a {
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+
+
+.home-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  color: #ffd700;
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  border-left: 5px solid gold;
+  font-family: 'Garamond', serif;
+}
+
+
+
+/* RECOMENDADOS */
+.home-recommended {
+  padding: 30px;
+  background-color: #4b0022;
+  border-top: 4px solid goldenrod;
+  color: #fff8dc;
+  font-family: 'Georgia', serif;
+}
+
+.home-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home-card {
+  background-color: #2e0014;
+  border: 2px solid goldenrod;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 250px;
+  box-shadow: 0 0 10px gold;
+  text-align: center;
+}
+
+/* LITERATURA MEDIEVAL */
+.home-literature {
+  padding: 40px;
+  background-color: #300010;
+  color: #fff;
+  border-top: 4px solid gold;
+  font-family: 'Georgia', serif;
+}
+
+.home-literature p {
+  color: #e5e880;
+
+}
+.home-columns {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.home-columns div {
+  background-color: #400017;
+  border: 2px solid goldenrod;
+  padding: 20px;
+  max-width: 300px;
+  box-shadow: 0 0 8px gold;
+}
+
+.home-btn {
+  background-color: goldenrod;
+  color: #300010;
+  border: none;
+  padding: 12px 25px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #ffd700;
+}
+
+.home-btn:hover {
+  background-color: #ffd700;
+  color: black;
+}
+
+
+
+.book-title {
+  font-family: 'MedievalSharp', cursive;
+  text-align: center;
+  color: #d4af37; /* dorado */
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px #000;
+  margin-bottom: 40px;
+}
+
+.book-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+}
+
+.book-card {
+  background-color: #4b1e24; 
+  border: 3px solid #d4af37;
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+  font-family: 'MedievalSharp', cursive;
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  max-width: 360px;
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: scale(1.02);
+}
+
+.book-image {
+  border: 3px solid #d4af37;
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+
+.book-name {
+  color: #ffffff;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.book-list h3 {
+  color: #fad955;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+.book-list p {
+  color: #fef6e4;
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.pdf-link,
+.buy-link {
+  color: #d4af37;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.pdf-link:hover,
+.buy-link:hover {
+  text-shadow: 1px 1px 2px white;
+}
+
+.book-card a {
+  color: #c59c14;
+  text-decoration: underline;
+  word-wrap: break-word; 
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.book-card strong,
+.book-card span {
+  color: #f59d18 !important; 
+}
+
+
+.favorite-form {
+  background-image: url('https://i.postimg.cc/Pq7Srt1D/home-4.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  margin-top: 2rem;
+  color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+}
+
+.favorite-form::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(48, 15, 19, 0.8);
+  border-radius: 12px;
+  z-index: 0;
+}
+
+.favorite-form * {
+  position: relative;
+  z-index: 1;
+}
+
+.favorite-form input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-size: 1rem;
+}
+
+.favorite-form input::placeholder {
+  color: #ffd700a8;
+}
+
+.favorite-form button {
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #d4af37;
+  color: #300f13;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.favorite-form button:hover {
+  background-color: white;
+  color: #4b1e24;
+  transform: scale(1.05);
+}
+
+.fav-button {
+  background-color: transparent;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #d4af37;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.fav-button:hover {
+  background-color: #d4af37;
+  color: #4b1e24;
+  transform: rotate(12deg);
+}
+
+
+.section-title {
+  color: #d4af37;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.book-card {
+  background-color: #300f13;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 10px #d4af37;
+  color: white;
+}
+
+.book-title {
+  color: #d4af37;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.info-value {
+  color: #fff !important;
+}
+
+.info-link {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+.info-link:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.fav-button {
+  background-color: transparent;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #d4af37;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.fav-button:hover {
+  background-color: #d4af37;
+  color: #4b1e24;
+}
+
+.favorite-form {
+  background-color: #300f13;
+  padding: 1rem;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: white;
+}
+
+.favorite-form input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  background-color: #5c2c34;
+  color: white;
+}
+
+.favorite-form button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #d4af37;
+  color: #300f13;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.favorite-form button:hover {
+  background-color: white;
+  color: #300f13;
+}
+
+.section-title {
+  text-align: center;
+  color: #d4af37;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenedor general de autores */
+.authors-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+  padding: 1rem;
+}
+
+/* Tarjeta de cada autor */
+.author-card {
+  background-color: #300f13;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s;
+}
+
+.author-card:hover {
+  transform: scale(1.03);
+}
+
+.author-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  border: 2px solid #d4af37;
+}
+
+.author-card a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.author-card a:hover {
+  text-decoration: underline;
+}
+
+/* Botón de favoritos */
+.fav-button {
+  background-color: transparent;
+  border: 2px solid #d4af37;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #d4af37;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.fav-button:hover {
+  background-color: #d4af37;
+  color: #4b1e24;
+}
+
+/* Formulario para añadir a favoritos */
+.favorite-form {
+  background-color: #5c2c34;
+  padding: 1rem;
+  border: 2px solid #d4af37;
+  border-radius: 8px;
+  margin-top: 1rem;
+  color: white;
+}
+
+.favorite-form input {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  padding: 0.3rem;
+  border: 1px solid #d4af37;
+  border-radius: 4px;
+  background-color: #300f13;
+  color: white;
+}
+
+.favorite-form button {
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #d4af37;
+  color: #300f13;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.favorite-form button:hover {
+  background-color: white;
+  color: #300f13;
+}
+
+
+.genre-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+  background-color: #fdf7e3; 
+}
+
+/* Cada ficha o tarjeta */
+.genre-card {
+  background-color: #d46c6c; 
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  max-width: 350px;
+  width: 100%;
+  border: 2px solid gold;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.genre-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px gold;
+}
+
+/* Imagen estilizada */
+.genre-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  border: 2px solid #fff;
+}
+
+/* Títulos */
+.genre-card h2 {
+  color: #ffd700;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+/* Textos */
+.genre-card p,
+.genre-card ul {
+  color: #fdfdfd;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Listas */
+.genre-card ul {
+  padding-left: 1.5rem;
+  list-style-type: "📜 ";
+}
+
+/* Botones */
+.genre-card button {
+  background-color: #ffd700;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #6c1a1a;
+  transition: background-color 0.3s ease;
+}
+
+.genre-card button:hover {
+  background-color: #f4d03f;
+}
+
+/* Formulario de favoritos */
+.favorite-form {
+  background-color: #fff5d1;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: #000;
+}
+
+.favorite-form input {
+  width: 100%;
+  padding: 0.3rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Estilo principal para el contenedor */
+.info-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+/* Tarjetas de género */
+.genre-card {
+  background-color: rgb(242, 136, 136);
+  border: 3px solid #debc10;
+  border-radius: 15px;
+  padding: 1.5rem;
+  max-width: 380px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #222;
+  transition: transform 0.3s ease;
+}
+
+.genre-card:hover {
+  transform: scale(1.02);
+}
+
+/* Imagen */
+.genre-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 1rem 0;
+}
+
+/* Títulos */
+.genre-card h2 {
+  color: #800000;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.genre-card h3 {
+  color: #800000;
+  margin-top: 1rem;
+}
+
+/* Texto fuerte */
+.genre-card p strong {
+  color: #800000;
+}
+
+/* Párrafos */
+.genre-card p,
+.genre-card ul {
+  color: #333;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* Botones */
+.genre-card button {
+  background-color: #800000;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0.3rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.genre-card button:hover {
+  background-color: #a00000;
+}
+
+/* Formulario de favoritos */
+.favorite-form {
+  background-color: #fceaea;
+  border: 2px solid #800000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* Título principal */
+h1 {
+  text-align: center;
+  color: #800000;
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+/* Asegura que todo se vea claro y no opaco */
+.genre-card p,
+.genre-card ul,
+.genre-card label,
+.genre-card input {
+  color: #111 !important;
+}
+
+
+
+
+
+
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  nav.top-header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.top-header .icons {
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: center;
+    width: 100%;
+  }
+
+  nav.top-header .icons a {
+    width: 80%;
+    margin: 0.4rem 0;
+  }
+}
+
+
+.no-access {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fef6e4;
+  border: 2px dashed #c59d5f;
+  border-radius: 12px;
+  color: #6b4c1f;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.subscribe-btn {
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.subscribe-btn:hover {
+  background-color: #b7962f;
+}
+

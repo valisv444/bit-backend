@@ -1,0 +1,16 @@
+
+.favorite-item {
+  background: #fdf6e3;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.edit-form {
+  background: #fff2db;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  border: 1px dashed #c89b3c;
+  border-radius: 8px;
+}

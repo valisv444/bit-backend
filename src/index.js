@@ -14,14 +14,17 @@ const authorRoutes = require('./routes/authorroutes');
 const infoRoutes = require('./routes/inforoutes');
 const subscriberRoutes = require('./routes/subscriberroutes');
 const suggestionRoutes = require('./routes/suggestionroutes');
+const favoritesRoutes = require('./routes/favoritesroutes');
 
 
-app.use('/api', bookRoutes);
-app.use('/api', authorRoutes);
-app.use('/api/info', infoRoutes);    
-app.use('/api', subscriberRoutes);
-app.use('/api', suggestionRoutes);
-
+// Rutas de la API montadas con prefijos claros
+app.use('/api/books', bookRoutes);
+app.use('/api/authors', authorRoutes);
+app.use('/api/info', infoRoutes);
+app.use('/api/subscribers', subscriberRoutes);       
+app.use('/api/suggestions', suggestionRoutes);
+app.use('/api/favorites', favoritesRoutes);
+               
 
 app.get('/', (req, res) => {
   res.send('⚔️ API de la Biblioteca Medieval funcionando correctamente');
@@ -40,6 +43,3 @@ mongoose.connect(process.env.MONGO_URI, {
 .catch((err) => {
   console.error('❌ Error al conectar a MongoDB:', err);
 });
-
-
-
